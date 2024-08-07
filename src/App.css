@@ -1,0 +1,515 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* img{
+  width: 100%;
+  height: 284px;
+  max-width: 100%;
+  object-fit: cover;
+} */
+body {
+  color: #313131;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  padding: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+header .logo a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+header nav {
+  display: flex;
+  gap: 10px;
+}
+header nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+}
+div.posts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 700px) {
+  div.posts {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+}
+@media screen and (max-width: 698px) {
+  .pst-Img{
+    /* max-width: 100%; */
+    margin: 0 auto;
+  }
+  .pst-Img img {
+    width: 100%;
+    object-position: center center;
+    object-fit: cover; 
+  }
+}
+
+.pst-Img img {
+  width: 100%;
+max-width: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+  /* height: 200px; */
+
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+
+.pst-Content h2 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: black;
+  text-decoration: none;
+}
+.pst-Content p {
+  margin-top: 15px;
+  line-height: 1.6rem;
+  margin: 10px 0 0 0;
+}
+.pst-Content p.info {
+  display: flex;
+  gap: 12px;
+}
+.pst-Content p.info a.author {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem;
+}
+
+.pst-Content p.info time {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+/* login page styling */
+.loginForm {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.navigatePage {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  flex: 1;
+}
+
+.navigatePage h1,
+.navigatePage p,
+.navigatePage button {
+  margin: 15px 0px;
+}
+
+.navigatePage button {
+  background-color: #e74c3c;
+  color: #ecf0f1;
+  padding: 14px;
+  width: 75%;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.navigatePage button:hover {
+  background-color: #c0392b;
+}
+
+.navigatePage h1 {
+  font-size: 2.4rem;
+}
+
+.loginInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e5f1f7;
+  width: 50%;
+  padding: 20px;
+  color: #2c3e50;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  flex: 1;
+}
+
+.loginInfo h1 {
+  margin: 15px 0px 45px 0px;
+  font-size: 2.4rem;
+}
+
+.loginForm input[type="text"],
+.loginForm input[type="email"],
+.loginForm input[type="password"] {
+  width: 350px;
+  padding: 12px 0px 12px 14px;
+  border-radius: 5px;
+  margin: 18px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #bdc3c7;
+  color: #2c3e50;
+}
+
+.loginInfo-Signup input[type="text"],
+.loginInfo-Signup input[type="email"],
+.loginInfo-Signup input[type="password"] {
+  width: 350px;
+  padding: 12px 0px 12px 14px;
+  border-radius: 5px;
+  margin: 18px 0px 3px 0px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #bdc3c7;
+  color: #2c3e50;
+}
+
+::placeholder {
+  color: #7f8c8d;
+}
+
+.loginInfo button {
+  background-color: #3498db;
+  color: #ecf0f1;
+  padding: 14px;
+  width: 75%;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  margin: 45px 0px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.loginInfo button:hover {
+  background-color: #2980b9;
+  cursor: pointer;
+  color: white;
+}
+
+.loginInfo .forgotpasLink {
+  color: #2980b9;
+  text-decoration: none;
+  margin: 2px 0px;
+  transition: font-weight 0.3s ease;
+}
+
+.forgotpasLink:hover {
+  font-weight: 700;
+}
+
+.loginInfo p {
+  margin: 12px 0px;
+  color: #2c3e50;
+}
+
+.loginInfo p .registerLink {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #e74c3c;
+}
+.navigatePage-Signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e5f1f7;
+  width: 50%;
+  padding: 20px;
+  color: #2c3e50;
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  flex: 1;
+}
+
+.navigatePage-Signup button {
+  background-color: #3498db;
+  color: #ecf0f1;
+  padding: 14px;
+  width: 75%;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  margin: 45px 0px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigatePage-Signup button:hover {
+  background-color: #2980b9;
+  cursor: pointer;
+  color: white;
+}
+
+.loginInfo-Signup {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  flex: 1;
+}
+.loginInfo-Signup button {
+  background-color: #e74c3c;
+  color: #ecf0f1;
+  padding: 14px;
+  width: 75%;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.loginInfo-Signup button:hover {
+  background-color: #c0392b;
+}
+.loginInfo-Signup p {
+  color: white;
+}
+
+/* forgot password */
+.forgotPassword button {
+  background-color: #db3434;
+  color: #ecf0f1;
+  padding: 14px;
+  width: 81%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  margin: 10px 0px 13px 0px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.forgotPassword button:hover {
+  background-color: #b92929;
+  cursor: pointer;
+  color: white;
+}
+
+.main-Container {
+  margin: 0 auto;
+  margin-top: 92px;
+  background: #2c3e50;
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 28px;
+}
+.forgotPassword {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.forgotPassword input[type="email"],
+.forgotPassword input[type="password"] {
+  width: 350px;
+  padding: 12px 0px 12px 14px;
+  border-radius: 5px;
+  margin: 18px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #bdc3c7;
+  color: #2c3e50;
+}
+.forgotPassword h1 {
+  margin: 12px 0px 19px 0px;
+  color: white;
+}
+.forgotPassword img {
+  width: 150px;
+}
+.logout {
+  background-color: red;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.logout:hover {
+  background-color: rgb(243, 84, 84);
+}
+.newPost {
+  background-color: rgb(10, 10, 143);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.newPost:hover {
+  background-color: rgb(12, 12, 202);
+}
+.newPostContainer h1 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.newPostContainer .field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.newPostContainer .field input {
+  padding: 0.7rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: 0.5px solid grey;
+  outline: none;
+}
+.newPostContainer .field label {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+label.contentLable {
+  font-size: 1.3rem;
+}
+#fileUploader {
+  margin-bottom: 8px;
+}
+.react-quill {
+  margin-top: 8px;
+  border: 0.5px solid grey;
+}
+.postBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.postBtn button {
+  margin-top: 15px;
+  width: 75%;
+  padding: 12px;
+  font-size: 1.3rem;
+  background-color: rgb(10, 10, 143);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.postBtn button:hover {
+  border-radius: 50px;
+  background-color: rgb(12, 12, 202);
+}
+
+.postContainer {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.postContainer .image img {
+  width: 100%;
+  height: 284px;
+  max-width: 100%;
+  object-fit: cover;
+}
+.postContainer h1 {
+  text-align: center;
+  margin: 15px 0px;
+  font-size: 2.5rem;
+}
+.postContent {
+  line-height: 1.4;
+  margin-top: 12px;
+}
+.authorInfo {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.authorSpan {
+  color: #a8a3a3;
+}
+
+.edit-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0px 15px 0px;
+  gap: 3px;
+}
+.edit-btn{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  background: #178305;
+  color: white;
+  text-decoration: none;
+  padding: 10px 23px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  font-size: 1.1rem;
+}
+.edit-btn:hover{
+  background: #23bd07;
+  border-radius: 50px;
+}
+
+.Action-Btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.delete-btn{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  background: #ff0000;
+  color: white;
+  text-decoration: none;
+  padding: 10px 23px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.delete-btn:hover{
+  background: #b80909;
+  border-radius: 50px;
+}
