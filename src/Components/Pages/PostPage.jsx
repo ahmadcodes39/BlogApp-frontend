@@ -28,9 +28,12 @@ const PostPage = () => {
     await deletePost(navigate, id);
   };
 
+
   if (!postInfo) {
     return <div>Loading...</div>;
   }
+  console.log("User Info ID:", userInfo.id);
+  console.log("Post Author ID:", postInfo.author._id);
 
   return (
     <div className="postContainer">
@@ -41,7 +44,7 @@ const PostPage = () => {
           {format(new Date(postInfo.createdAt), "MMM d, yyyy HH:mm")}
         </span>
       </h4>
-      {userInfo?.id === postInfo.author?._id && (
+      {userInfo?.id === postInfo.author?._id ? (
         <dic className="Action-Btns">
           <div className="edit-row">
             <Link to={`/edit/${postInfo._id}`} className="edit-btn">
@@ -54,7 +57,7 @@ const PostPage = () => {
             </a>
           </div>
         </dic>
-      )}
+      ):'hello'}
       <div className="image">
         <img src={`http://localhost:9090/${postInfo.coverImage}`} alt="" />
       </div>
